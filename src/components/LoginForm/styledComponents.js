@@ -5,8 +5,7 @@ export const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background:${props => (props.bgColor ? '#181818' : '#f9f9f9')};
-  
+  background: ${props => (props.bgColor ? '#181818' : '#f9f9f9')};
 `
 export const FormContainer = styled.form`
   display: flex;
@@ -15,7 +14,7 @@ export const FormContainer = styled.form`
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 350px;
-  background:${props => (props.bgColor ? '#181818' : '#f9f9f9')};
+  background: ${props => (props.bgColor ? '#181818' : '#f9f9f9')};
 `
 
 export const LoginLogo = styled.img`
