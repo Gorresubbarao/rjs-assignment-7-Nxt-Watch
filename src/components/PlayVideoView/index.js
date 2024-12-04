@@ -71,7 +71,7 @@ const PlayVideoView = props => {
               <PlayVideoStatus color={textColor}>
                 {videoDetails.viewCount} views
                 <PlayVideoDot> &#8226; </PlayVideoDot>
-                {videoDetails.publishedAt} ago
+                {videoDetails.publishedAt}
               </PlayVideoStatus>
               <PlaySocialButtonsContainer>
                 <BtnContainer>

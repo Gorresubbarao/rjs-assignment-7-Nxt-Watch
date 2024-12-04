@@ -70,14 +70,14 @@ class LoginForm extends Component {
     const {username} = this.state
     return (
       <>
-        <InputLabel htmlFor='username'>USERNAME</InputLabel>
+        <InputLabel htmlFor="username">USERNAME</InputLabel>
         <UserInput
-          type='text'
-          id='username'
+          type="text"
+          id="username"
           value={username}
-          name='username'
+          name="username"
           onChange={this.onChangeHandler}
-          placeholder='Username'
+          placeholder="Username"
         />
       </>
     )
@@ -88,22 +88,22 @@ class LoginForm extends Component {
     const inputType = showPassword ? 'text' : 'password'
     return (
       <>
-        <InputLabel htmlFor='password'>PASSWORD</InputLabel>
+        <InputLabel htmlFor="password">PASSWORD</InputLabel>
         <UserInput
           type={inputType}
-          id='password'
+          id="password"
           value={password}
-          name='password'
+          name="password"
           onChange={this.onChangeHandler}
-          placeholder='Password'
+          placeholder="Password"
         />
         <CheckboxContainer>
           <Checkbox
-            type='checkbox'
-            id='checkbox'
+            type="checkbox"
+            id="checkbox"
             onChange={this.OnShowPassword}
           />
-          <ShowPassword htmlFor='checkbox'>Show Password</ShowPassword>
+          <ShowPassword htmlFor="checkbox">Show Password</ShowPassword>
         </CheckboxContainer>
       </>
     )
@@ -113,7 +113,7 @@ class LoginForm extends Component {
     const {showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      return <Redirect to='/' />
+      return <Redirect to="/" />
     }
     return (
       <ThemeAndVideoContext.Consumer>
@@ -127,10 +127,10 @@ class LoginForm extends Component {
           return (
             <AppContainer bgColor={isDarkTheme}>
               <FormContainer onSubmit={this.submitForm} bgColor={isDarkTheme}>
-                <LoginLogo src={loginLogImgUrl} alt='website logo' />
+                <LoginLogo src={loginLogImgUrl} alt="website logo" />
                 <InputContainer>{this.renderUsernameField()}</InputContainer>
                 <InputContainer>{this.renderPasswordField()}</InputContainer>
-                <LoginButton type='submit'>Login</LoginButton>
+                <LoginButton type="submit">Login</LoginButton>
                 {showSubmitError && <SubmitError>*{errorMsg}</SubmitError>}
               </FormContainer>
             </AppContainer>

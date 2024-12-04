@@ -40,6 +40,7 @@ export const SocialButton = styled.button`
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  cursor: pointer;
   color: ${props => props.color};
 `
 export const ButtonText = styled.span`

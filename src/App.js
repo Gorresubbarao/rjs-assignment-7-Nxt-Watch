@@ -52,14 +52,6 @@ class App extends Component {
     }
   }
 
-  removeVideo = id => {
-    const {savedVideos} = this.state
-    const updatedSavedVideos = savedVideos.filter(
-      eachVideo => eachVideo.id !== id,
-    )
-    this.setState({savedVideos: updatedSavedVideos})
-  }
-
   render() {
     const {savedVideos, isDarkTheme, activeTab} = this.state
     // console.log(savedVideos)
@@ -94,3 +86,11 @@ class App extends Component {
 }
 
 export default App
+
+// removeVideo = id => {
+//   const {savedVideos} = this.state
+//   const updatedSavedVideos = savedVideos.filter(
+//     eachVideo => eachVideo.id !== id,
+//   )
+//   this.setState({savedVideos: updatedSavedVideos})
+// }
